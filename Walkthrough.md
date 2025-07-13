@@ -17,7 +17,7 @@ In this second phase, I approached the same machine from a forensic analyst’s 
 
 ---
 
-## - ARTIFACT ACQUISITION
+## 1. ARTIFACT ACQUISITION
 I started by using FTK Imager to collect both targeted and broad artifacts:
 | Artifact                | Path                                                            |
 | ----------------------- | --------------------------------------------------------------- |
@@ -32,12 +32,12 @@ I used FTK Imager to create a disk image `.001`, consolidating these artifacts, 
 
 ---
 
-## - EVIDENCE TRANSFER
+## 2. EVIDENCE TRANSFER
 I securely copied the `.001` disk image from the compromised Windows system to my dedicated forensics workstation.
 
 ---
 
-## - EXAMINING THE DISK IMAGE
+## 3. EXAMINING THE DISK IMAGE
 On my forensics machine:
 
 - I loaded the `.001` image back into FTK Imager.
@@ -45,7 +45,7 @@ On my forensics machine:
 
 ---
 
-## - PARSING THE ARTIFACTS
+## 4. PARSING THE ARTIFACTS
 Next, I launched KAPE (Kroll Artifact Parser and Extractor), pointed it to the extracted image contents, and configured it:
 - Selected key targets (like registry hives, event logs, MFT).
 - Selected modules to parse this data into structured outputs.
@@ -56,13 +56,13 @@ KAPE processed the evidence and produced multiple Excel sheets (CSV/XLSX) contai
 
 ---
 
-## MANUAL ANALYSIS
+## 5. MANUAL ANALYSIS
 - I loaded these sheets into Timeline Explorer to get a powerful pivot table-style view.
 - This helped me filter and sort by timestamps, path names, process names, and more.
 
 ---
 
-## FINDINGS — TRACING THE ATTACKER
+## 6. FINDINGS — TRACING THE ATTACKER
 Through this analysis, I found clear artifacts of the attack:
 
 - Persistence:
@@ -92,7 +92,7 @@ Through this analysis, I found clear artifacts of the attack:
 
 ---
 
-## BUILDING A TIMELINE
+## 7. BUILDING A TIMELINE
 Based on the parsed timestamps from the MFT, registry, and event logs, I reconstructed:
 - When the initial reverse shell was executed.
 - When the persistence payload was copied to the startup folder.
