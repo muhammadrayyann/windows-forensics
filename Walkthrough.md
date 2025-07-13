@@ -109,7 +109,8 @@ This provided a clear chronological picture of the attack.
 
 ---
 
-> ⚠️ Disclaimer
+> ⚠️ Disclaimer:
+> 
 > This project was performed strictly for educational and ethical purposes in a controlled lab environment.
 > Always ensure you have explicit authorization before performing any form of forensic analysis or incident response on systems.
 
