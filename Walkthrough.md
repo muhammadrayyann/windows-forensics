@@ -1,5 +1,3 @@
-# WINDOWS FORENSICS
-
 ## OBJECTIVE:
 
 The goal of this phase was to perform a forensic investigation on a compromised Windows 10 system. This included collecting targeted artifacts, analyzing system activity to trace attacker behavior, and constructing a clear timeline of the intrusion.
