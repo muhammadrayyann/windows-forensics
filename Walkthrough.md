@@ -6,9 +6,9 @@ The goal of this phase was to perform a forensic investigation on a compromised 
 
 ## INTRODUCTION:
 
-This project is a follow-up to my earlier Windows 10 red team simulation, where I compromised a lab machine using reverse shells, set up persistence, and carried out post-exploitation activities.
+This project is a follow-up to my earlier [Windows 10 exploitation](https://github.com/muhammadrayyann/red-team-windows-exploitation.git), where I compromised a Windows machine using reverse shells, set up persistence, and carried out post-exploitation activities.
 
-In this second phase, I approached the same machine from a forensic analyst’s perspective, capturing disk images, extracting key artifacts, and analyzing them with dedicated tools to identify traces of the attacker’s activity, including payload files, suspicious commands, and network indicators pointing to the attacker's system.
+In this second phase, I approached the same machine from a forensic analyst’s perspective, capturing a disk image, extracting key artifacts, and analyzing them with dedicated tools to identify traces of the attacker’s activity, including payload files, suspicious commands, and network indicators pointing to the attacker's system.
 
 ## TOOLS USED:
 - FTK Imager
@@ -19,6 +19,7 @@ In this second phase, I approached the same machine from a forensic analyst’s 
 
 ## 1. ARTIFACT ACQUISITION
 I started by using FTK Imager to collect both targeted and broad artifacts:
+
 | Artifact                | Path                                                            |
 | ----------------------- | --------------------------------------------------------------- |
 | Master File Table (MFT) | `C:\$MFT`                                                       |
