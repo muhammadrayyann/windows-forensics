@@ -103,7 +103,7 @@ This provided a clear chronological picture of the attack.
 ---
 
 ## SUMMARY
-- Through this phase, I was able to effectively:
+Through this phase, I was able to effectively:
 - Collect and preserve targeted evidence using FTK Imager.
 - Parse and analyze large volumes of data with KAPE and Timeline Explorer.
 - Correlate multiple sources to identify malicious activity, persistence mechanisms, the attacker's IP, and a probable timeline of compromise.
