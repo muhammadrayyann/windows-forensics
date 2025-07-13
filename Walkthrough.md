@@ -8,7 +8,7 @@ The goal of this phase was to perform a forensic investigation on a compromised 
 
 This project is a follow-up to my earlier Windows 10 red team simulation, where I compromised a lab machine using reverse shells, set up persistence, and carried out post-exploitation activities.
 
-In this second phase, I approached the same machine from a forensic analyst’s perspective, capturing disk images, extracting key artifacts, and analyzing them with dedicated tools to identify traces of the attacker’s activity — including payload files, suspicious commands, and network indicators pointing to the attacker's system.
+In this second phase, I approached the same machine from a forensic analyst’s perspective, capturing disk images, extracting key artifacts, and analyzing them with dedicated tools to identify traces of the attacker’s activity, including payload files, suspicious commands, and network indicators pointing to the attacker's system.
 
 ## TOOLS USED:
 - FTK Imager
@@ -29,7 +29,8 @@ I started by using FTK Imager to collect both targeted and broad artifacts:
 | SYSTEM registry hive    | `C:\Windows\System32\config\SYSTEM`                             |
 | SOFTWARE registry hive  | `C:\Windows\System32\config\SOFTWARE`                           |
 | User’s directory        | `C:\Users\<username>` (where payloads & artifacts were dropped) |
-I used FTK Imager to create a disk image `.001` consolidating these artifacts, ensuring proper evidence integrity.
+
+I used FTK Imager to create a disk image `.001`, consolidating these artifacts, ensuring proper evidence integrity.
 
 ---
 
@@ -99,7 +100,11 @@ This provided a clear chronological picture of the attack.
 - Through this phase, I was able to effectively:
 - Collect and preserve targeted evidence using FTK Imager.
 - Parse and analyze large volumes of data with KAPE and Timeline Explorer.
-- Correlate multiple sources to identify malicious activity, persistence mechanisms, attacker's IP, and a probable timeline of compromise.
+- Correlate multiple sources to identify malicious activity, persistence mechanisms, the attacker's IP, and a probable timeline of compromise.
+
+---
+
+## PROJECT SNIPPETS:
 
 ---
 
