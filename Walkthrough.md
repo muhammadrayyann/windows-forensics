@@ -27,19 +27,19 @@ I started by using FTK Imager to collect both targeted and broad artifacts:
 | SOFTWARE registry hive  | `C:\Windows\System32\config\SOFTWARE`                           |
 | User’s directory        | `C:\Users\<username>` (where payloads & artifacts were dropped) |
 
-I used FTK Imager to create a disk image `.001`, consolidating these artifacts, ensuring proper evidence integrity.
+I used FTK Imager to create a disk image `.ad1`, consolidating these artifacts, ensuring proper evidence integrity.
 
 ---
 
 ## 2. EVIDENCE TRANSFER
-I securely copied the `.001` disk image from the compromised Windows system to my dedicated forensics workstation.
+I securely copied the `.ad1` disk image from the compromised Windows system to my dedicated forensics workstation.
 
 ---
 
 ## 3. EXAMINING THE DISK IMAGE
 On my forensics machine:
 
-- I loaded the `.001` image back into FTK Imager.
+- I loaded the `.ad1` image back into FTK Imager.
 - Used FTK Imager to mount and extract the contents of the disk image, effectively recreating the file system for analysis.
 
 ---
