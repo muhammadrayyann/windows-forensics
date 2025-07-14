@@ -110,31 +110,31 @@ Through this phase, I was able to effectively:
 ---
 
 ## PROJECT SNIPPETS:
-![1](/snippets/1.1.png)
+![1](/Snippets/1.1.png)
 
-![1.1](/snippets/1.png)
+![1.1](/Snippets/1.png)
 
-![2](/snippets/2.png)
+![2](/Snippets/2.png)
 
-![3](/snippets/3.png)
+![3](/Snippets/3.png)
 
-![4](/snippets/4.png)
+![4](/Snippets/4.png)
 
-![5](/snippets/5.png)
+![5](/Snippets/5.png)
 
-![6](/snippets/6.png)
+![6](/Snippets/6.png)
 
-![7](/snippets/7.png)
+![7](/Snippets/7.png)
 
-![8](/snippets/8.png)
+![8](/Snippets/8.png)
 
-![9](/snippets/9.png)
+![9](/Snippets/9.png)
 
-![10](/snippets/10.png)
+![10](/Snippets/10.png)
 
-![11](/snippets/11.png)
+![11](/Snippets/11.png)
 
-![12](/snippets/12.png)
+![12](/Snippets/12.png)
 
 ---
 
